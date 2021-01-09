@@ -1,0 +1,57 @@
+*{
+	font-family:"Ubuntu mono", "segoe ui";
+	font-weight: 500;
+	color:#33333c;
+	font-size:20px
+}
+body{
+	
+}
+#header{
+	height:30vh;
+}
+#container{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+}
+#title{
+
+}
+.inp{
+	padding:7px 10px;
+	border:solid 2px #bbb;
+	outline:none;
+	border-radius:4px;
+	width:300px;
+	transition:0.1s;
+}
+.inp:focus{
+	border-color:#0088ff;
+}
+#output{
+	margin:15px 0;
+}
+.btn{
+	padding:8px 14px;
+	border-radius:5px;
+	display:inline-block;
+	margin:0 6px;
+	cursor:pointer;
+	transition:0.1s;
+	user-select: none
+}
+#submit:hover{
+	background:#0088ff;
+}
+#reload:hover{
+	color:#bbb;
+}
+#reload{
+	color:#777;
+}
+#submit{
+	box-shadow: 1px 1px 4px #0077ff99;
+	color:#f3f3f3;
+	background:#0077ff;
+}
