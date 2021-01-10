@@ -1,4 +1,4 @@
-let url = "https://script.google.com/macros/s/AKfycbyaBnlqEmtPHsJlOztldIgrbhd0VKTq17Ok9Q16ckJbdv8pvhk/exec";
+let url = "https://script.google.com/macros/s/AKfycbyGi0iQAtXnhfvY_fH_DZqjZQNXy9JiIVcY-PfkSXx7v4Gzjc0/exec";
 let output = document.getElementById("output");
 let input = document.getElementById("input");
 let submit = document.getElementById("submit"),
@@ -14,7 +14,10 @@ reload.addEventListener("click",function(){
 function doPost(){
 	let requests = new XMLHttpRequest();
 	requests.open("POST", url, true);
-	requests.send("name=Dung");
+	requests.onreadystatechange = function(){
+		if(this.readyState == 4) output.innerHTML = "Successfuly !";
+	requests.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	requests.send(input.value);
 	return 0;
 }
 
