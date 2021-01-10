@@ -20,7 +20,6 @@ function doPost(){
 	requests.send(input.value);
 	return 0;
 }
-
 function doGet(){
 	let requests = new XMLHttpRequest();
 	requests.open("GET",url);
@@ -30,5 +29,6 @@ function doGet(){
 		}
 	}
 	requests.send()
-	return 0;
+	return 0
 }
+//End.
