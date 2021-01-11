@@ -15,7 +15,7 @@ function doPost(){
 	let requests = new XMLHttpRequest();
 	requests.open("POST", url, true);
 	requests.onreadystatechange = function(){
-		if(this.readyState == 4) output.innerHTML = "Successfuly !";
+		if(this.readyState == 4) output.innerHTML = "Post Successfuly !";
 	}
 	requests.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
 	requests.send(input.value);
