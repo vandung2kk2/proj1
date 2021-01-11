@@ -17,7 +17,7 @@ function doPost(){
 	requests.onreadystatechange = function(){
 		if(this.readyState == 4) output.innerHTML = "Successfuly !";
 	}
-	requests.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	requests.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=utf-8");
 	requests.send(input.value);
 	return 0;
 }
