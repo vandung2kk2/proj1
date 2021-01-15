@@ -1,35 +1,20 @@
-let url = "https://script.google.com/macros/s/AKfycbyGi0iQAtXnhfvY_fH_DZqjZQNXy9JiIVcY-PfkSXx7v4Gzjc0/exec";
+let url = "https://script.google.com/macros/s/AKfycbxVgGbsxLRCJ5NUpd8EKg2E3NuuFpDQO8XVEKbuRYdHDmLb8VvZBPqg/exec";
 let output = document.getElementById("output");
 let input = document.getElementById("input");
 let submit = document.getElementById("submit"),
 	reload = document.getElementById("reload");
-
+console.log("OK");
 submit.addEventListener("click",function(){
-	doPost()
+	doGet();
 });
-reload.addEventListener("click",function(){
-	window.location.reload()
-})
 
-function doPost(){
-	let requests = new XMLHttpRequest();
-	requests.open("POST", url, true);
-	requests.onreadystatechange = function(){
-		if(this.readyState == 4) output.innerHTML = "Posted !";
-	}
-	requests.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charser=UTF-8");
-	requests.send(input.value);
-	return 0;
-}
 function doGet(){
-	let requests = new XMLHttpRequest();
-	requests.open("GET",url);
-	requests.onreadystatechange = function(){
+	var res = new XMLHttpRequest();
+	res.open("GET", url + "&name=" + input.value);
+	res.onreadystatechange = function(){
 		if(this.readyState == 4){
-			output.innerHTML = this.responseText;
+			console.log(this.responseText)
 		}
 	}
-	requests.send()
-	return 0
+	res.send()
 }
-//End.
