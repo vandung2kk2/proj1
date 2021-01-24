@@ -1,5 +1,6 @@
+@import url("https://vandung2kk2.github.io/fonts/Adobe-clean/stylesheet.css")
 *{
-	font-family:"Ubuntu mono", "segoe ui";
+	font-family:"Adobe Clean", "Ubuntu mono", "segoe ui";
 	font-weight: 500;
 	color:#33333c;
 	font-size:20px
